@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    * {
+        box-sizing: border-box;
+    }
+
+    body {
+        min-height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background: linear-gradient(135deg, #667eea, #764ba2);
+    }
+
+    .card {
+        background: #ffffff;
+        padding: 24px 28px;
+        width: 320px;
+        border-radius: 12px;
+        box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+        display: flex;
+        flex-direction: column;
+        gap: 14px;
+    }
+
+    .card label {
+        font-size: 14px;
+        font-weight: 600;
+        color: #333;
+    }
+
+    .card input[type="text"],
+    .card input[type="number"] {
+        padding: 10px 12px;
+        border-radius: 8px;
+        border: 1px solid #ccc;
+        outline: none;
+        transition: 0.3s;
+    }
+
+    .card input[type="text"]:focus,
+    .card input[type="number"]:focus {
+        border-color: #667eea;
+        box-shadow: 0 0 0 2px rgba(102, 126, 234, 0.2);
+    }
+
+    .radio-group {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+    }
+
+    .radio-group input {
+        accent-color: #667eea;
+    }
+
+    .radio-group label {
+        font-weight: 500;
+        font-size: 14px;
+    }
+
+    button {
+    margin-top: 10px;
+    padding: 10px;
+    border-radius: 8px;
+    border: none;
+    background: #667eea;
+    color: white;
+    font-size: 15px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+button:hover {
+    background: #5a6fdc;
+}
+
+/* ANIMASI ABSURD */
+@keyframes absurd {
+    0%   { transform: rotate(0) scale(1); }
+    20%  { transform: rotate(90deg) scale(1.1); }
+    40%  { transform: rotate(180deg) scale(0.9); }
+    60%  { transform: rotate(270deg) scale(1.2); }
+    80%  { transform: rotate(360deg) scale(0.95); }
+    100% { transform: rotate(720deg) scale(1); }
+}
+
+button.absurd {
+    animation: absurd 0.8s ease-in-out;
+}
+
+</style>
+<body>
+    <div class="card">
+        <label>Nama</label>
+        <input type="text" name="nama">
+
+        <label>Jenis Kelamin</label>
+        <div class="radio-group">
+            <input type="radio" value="laki-laki" name="jk">
+            <label>Laki-laki</label>
+
+            <input type="radio" value="perempuan" name="jk">
+            <label>Perempuan</label>
+        </div>
+
+        <label>Usia</label>
+        <input type="number" name="usia">
+
+        <button>Simpan</button>
+    </div>
+    <script>
+        const button = document.querySelector('button');
+
+        button.addEventListener('click', () => {
+            button.classList.add('absurd');
+
+            setTimeout(() => {
+                button.classList.remove('absurd');
+            }, 800); 
+        });
+    </script>
+
+</body>
+</html>
