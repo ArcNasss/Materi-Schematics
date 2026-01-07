@@ -44,7 +44,6 @@ body {
     font-size: 14px;
 }
 
-/* TABLE */
 table {
     width: 100%;
     border-collapse: separate;
@@ -70,14 +69,12 @@ tbody td {
     font-size: 14px;
 }
 
-/* CUSTOMER */
 .customer {
     display: flex;
     align-items: center;
     gap: 10px;
 }
 
-/* STATUS BADGE */
 .status {
     padding: 6px 14px;
     border-radius: 20px;

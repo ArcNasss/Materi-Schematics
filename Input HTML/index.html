@@ -1,131 +1,88 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Form sederhana</title>
 </head>
 <style>
-    * {
-        box-sizing: border-box;
-    }
-
     body {
-        min-height: 100vh;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        background: linear-gradient(135deg, #667eea, #764ba2);
+        font-family: Arial, sans-serif;
+        background-color: #f2f2f2;
     }
 
     .card {
-        background: #ffffff;
-        padding: 24px 28px;
-        width: 320px;
-        border-radius: 12px;
-        box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
-        display: flex;
-        flex-direction: column;
-        gap: 14px;
-    }
-
-    .card label {
-        font-size: 14px;
-        font-weight: 600;
-        color: #333;
-    }
-
-    .card input[type="text"],
-    .card input[type="number"] {
-        padding: 10px 12px;
-        border-radius: 8px;
+        width: 300px;
+        background-color: white;
+        padding: 15px;
+        margin: 100px auto;
         border: 1px solid #ccc;
-        outline: none;
-        transition: 0.3s;
+        border-radius: 5px;
     }
 
-    .card input[type="text"]:focus,
-    .card input[type="number"]:focus {
-        border-color: #667eea;
-        box-shadow: 0 0 0 2px rgba(102, 126, 234, 0.2);
+    label {
+        display: block;
+        margin-top: 10px;
+        font-weight: bold;
+    }
+
+    input[type="text"],
+    input[type="number"] {
+        width: 100%;
+        padding: 5px;
+        margin-top: 5px;
+        border: 1px solid #aaa;
+        border-radius: 3px;
     }
 
     .radio-group {
-        display: flex;
-        align-items: center;
-        gap: 10px;
-    }
-
-    .radio-group input {
-        accent-color: #667eea;
-    }
-
-    .radio-group label {
-        font-weight: 500;
-        font-size: 14px;
+        margin-top: 5px;
     }
 
     button {
-    margin-top: 10px;
-    padding: 10px;
-    border-radius: 8px;
-    border: none;
-    background: #667eea;
-    color: white;
-    font-size: 15px;
-    font-weight: 600;
-    cursor: pointer;
-    transition: 0.3s;
-}
+        width: 100%;
+        margin-top: 15px;
+        padding: 8px;
+        background-color: #4CAF50;
+        color: white;
+        border: none;
+        border-radius: 3px;
+        cursor: pointer;
+    }
 
-button:hover {
-    background: #5a6fdc;
-}
-
-@keyframes absurd {
-    0%   { transform: rotate(0) scale(1); }
-    20%  { transform: rotate(90deg) scale(1.1); }
-    40%  { transform: rotate(180deg) scale(0.9); }
-    60%  { transform: rotate(270deg) scale(1.2); }
-    80%  { transform: rotate(360deg) scale(0.95); }
-    100% { transform: rotate(720deg) scale(1); }
-}
-
-button.absurd {
-    animation: absurd 0.8s ease-in-out;
-}
-
+    button:hover {
+        background-color: #45a049;
+    }
 </style>
+
 <body>
     <div class="card">
         <label>Nama</label>
-        <input type="text" name="nama">
+        <input type="text">
 
         <label>Jenis Kelamin</label>
         <div class="radio-group">
-            <input type="radio" value="laki-laki" name="jk">
-            <label>Laki-laki</label>
-
-            <input type="radio" value="perempuan" name="jk">
-            <label>Perempuan</label>
+            <input type="radio" name="jk"> Laki-laki
+            <input type="radio" name="jk"> Perempuan
         </div>
 
         <label>Usia</label>
-        <input type="number" name="usia">
+        <input type="number">
 
-        <button>Simpan</button>
+        <button type="button">Simpan</button>
     </div>
+
     <script>
         const button = document.querySelector('button');
 
         button.addEventListener('click', () => {
-            button.classList.add('absurd');
-
-            setTimeout(() => {
-                button.classList.remove('absurd');
-            }, 800); 
+            document.querySelectorAll('input').forEach(input => {
+                if (input.type === 'radio') {
+                    input.checked = false;
+                } else {
+                    input.value = '';
+                }
+            });
         });
     </script>
-
 </body>
 </html>

@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Materi Animasi CSS</title>
+</head>
+
+<style>
+    body {
+        font-family: Arial, sans-serif;
+        background-color: #f0f0f0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        gap: 40px;
+    }
+
+    /* BOX HOVER */
+    .box {
+        width: 120px;
+        height: 120px;
+        background-color: #4CAF50;
+        color: white;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        cursor: pointer;
+        transition: 0.5s;
+    }
+
+    .box:hover {
+        transform: rotate(45deg) scale(1.2);
+        background-color: #45a049;
+    }
+
+    /* SPINNER */
+    .spinner {
+        width: 80px;
+        height: 80px;
+        border: 8px solid #ccc;
+        border-top: 8px solid #2196F3;
+        border-radius: 50%;
+        animation: spin 1s linear infinite;
+    }
+
+    @keyframes spin {
+        from {
+            transform: rotate(0deg);
+        }
+        to {
+            transform: rotate(360deg);
+        }
+    }
+
+    /* CARD */
+    .card {
+        width: 160px;
+        height: 100px;
+        background-color: white;
+        border: 1px solid #ccc;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        transition: 0.4s;
+    }
+
+    .card:hover {
+        transform: translateY(-10px);
+        box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+    }
+</style>
+
+<body>
+
+    <div class="box">
+        Hover Aku
+    </div>
+
+    <div class="spinner"></div>
+
+    <div class="card">
+        Card Hover
+    </div>
+
+</body>
+</html>
