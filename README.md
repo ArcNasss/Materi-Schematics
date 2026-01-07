@@ -1,12 +1,11 @@
 
-# Materi Tim IT
+# Materi Schematic
 
 Semua materi dari pertemuan akan di simpan di repository ini
 
 
 ## 🚀 About Me
-
-Tim IT adalah sebuah komunitas IT di SMKN 4 Bojonegoro. Kami berdiri dengan tujuan untuk belajar dan sukses bersama di bidang teknologi
+Schematic adalah sebuah komunitas IT di SMKN 4 Bojonegoro. Kami berdiri dengan tujuan untuk belajar dan sukses bersama di bidang teknologi
 
 
 ## Installation
@@ -26,3 +25,5 @@ Cara download semua materi
     2. Klik Code
     3. Download Zip
 ```
+
+Berani memulai demi dolar yang akan di gapai🔥🔥
